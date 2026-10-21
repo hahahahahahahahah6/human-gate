@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "human-gate"
+version = "0.1.0"
+description = "Cross-platform human approval channel for coding agents: agents request, humans approve, timeouts default-deny."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "hao li", email = "haoli5933@gmail.com" }]
+keywords = ["ai-agents", "approval", "human-in-the-loop", "claude-code", "safety"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Software Development",
+]
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/human-gate"
+Issues = "https://github.com/hahahahahahahahah6/human-gate/issues"
+
+[project.scripts]
+humangate = "humangate.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
